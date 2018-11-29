@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC.Shop.Data", "RC.Shop.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC.Shop.AppService", "RC.Shop.AppService\RC.Shop.AppService.csproj", "{51CEFD94-9550-49FA-843C-9252F72B2797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVueTest", "WebVueTest\WebVueTest.csproj", "{3F7B4B2C-0DA0-4CBE-9D4A-FDC7A3C9024C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{51CEFD94-9550-49FA-843C-9252F72B2797}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51CEFD94-9550-49FA-843C-9252F72B2797}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51CEFD94-9550-49FA-843C-9252F72B2797}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3F7B4B2C-0DA0-4CBE-9D4A-FDC7A3C9024C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F7B4B2C-0DA0-4CBE-9D4A-FDC7A3C9024C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F7B4B2C-0DA0-4CBE-9D4A-FDC7A3C9024C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F7B4B2C-0DA0-4CBE-9D4A-FDC7A3C9024C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
