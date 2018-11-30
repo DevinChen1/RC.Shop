@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RC.Shop.Core.Domain.Enums;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace RC.Shop.Core
 {
@@ -7,87 +9,43 @@ namespace RC.Shop.Core
     /// </summary>
     public class OrderActionInfo
     {
-        private int _aid;//处理id
-        private int _oid;//订单id
-        private int _uid;//用户id
-        private string _realname;//真实名称
-        private int _admingid;//管理员组id
-        private string _admingtitle;//管理员组标题
-        private int _actiontype;//处理类型
-        private DateTime _actiontime;//处理时间
-        private string _actiondes = "";//处理描述
 
         /// <summary>
         /// 处理id
         /// </summary>
-        public int Aid
-        {
-            get { return _aid; }
-            set { _aid = value; }
-        }
+        [Key]
+        public string Aid { get; set; }
         /// <summary>
         /// 订单id
         /// </summary>
-        public int Oid
-        {
-            get { return _oid; }
-            set { _oid = value; }
-        }
+        public int Oid { get; set; }
         /// <summary>
         /// 用户id
-        /// </summary>
-        public int Uid
-        {
-            get { return _uid; }
-            set { _uid = value; }
-        }
+        /// </summary>  
+        public int Uid { get; set; }
         /// <summary>
         /// 真实名称
         /// </summary>
-        public string RealName
-        {
-            get { return _realname; }
-            set { _realname = value; }
-        }
+        public string RealName { get; set; }
         /// <summary>
         /// 管理员组id
         /// </summary>
-        public int AdminGid
-        {
-            get { return _admingid; }
-            set { _admingid = value; }
-        }
+        public int AdminGid { get; set; }
         /// <summary>
         /// 管理员组标题
         /// </summary>
-        public string AdminGTitle
-        {
-            get { return _admingtitle; }
-            set { _admingtitle = value; }
-        }
+        public string AdminGTitle { get; set; }
         /// <summary>
         /// 处理类型
         /// </summary>
-        public int ActionType
-        {
-            get { return _actiontype; }
-            set { _actiontype = value; }
-        }
+        public OrderActionType ActionType { get; set; } = OrderActionType.Confirm;
         /// <summary>
         /// 处理时间
         /// </summary>
-        public DateTime ActionTime
-        {
-            get { return _actiontime; }
-            set { _actiontime = value; }
-        }
+        public DateTime ActionTime { get; set; }
         /// <summary>
         /// 处理描述
         /// </summary>
-        public string ActionDes
-        {
-            get { return _actiondes; }
-            set { _actiondes = value; }
-        }
+        public string ActionDes { get; set; }
     }
 }

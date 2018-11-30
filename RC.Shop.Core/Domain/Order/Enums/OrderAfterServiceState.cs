@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RC.Shop.Core
+namespace RC.Shop.Core.Domain.Enums
 {
     /// <summary>
     /// 订单售后服务状态

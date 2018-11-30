@@ -13,4 +13,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RC.Shop.Core\RC.Shop.Core.csproj" />
+  </ItemGroup>
+
 </Project>

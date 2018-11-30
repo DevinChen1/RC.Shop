@@ -1,31 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace RC.Shop.Core
 {
     /// <summary>
-    /// 订单商品信息类
+    /// 购物车项
     /// </summary>
-    public class OrderProductInfo
+    public class CartProductInfo
     {
         /// <summary>
         /// 记录id
         /// </summary>
-        public string RecordId { get; set; }
-
-        /// <summary>
-        /// 订单id
-        /// </summary>
         [Key]
-        public string Oid { get; set; }
+        public string RecordId { get; set; }
+        /// <summary>
+        /// 是否选中
+        /// </summary>
+        public bool IsSelected { get; set; } = false;
         /// <summary>
         /// 用户id
         /// </summary>
         public string Uid { get; set; }
-        /// <summary>
-        /// sessionId
-        /// </summary>
-        public string Sid { get; set; }
         /// <summary>
         /// 商品id
         /// </summary>
@@ -35,11 +31,6 @@ namespace RC.Shop.Core
         /// </summary>
         public string PSN { get; set; }
         /// <summary>
-        /// 分类id
-        /// </summary>
-        public string CateId { get; set; }
-
-        /// <summary>
         /// 商品名称
         /// </summary>
         public string Name { get; set; }
@@ -47,37 +38,25 @@ namespace RC.Shop.Core
         /// 商品展示图片
         /// </summary>
         public string ShowImg { get; set; }
-
         /// <summary>
-        /// 商品商城价格
+        /// 商城单价
         /// </summary>
-        public decimal ShopPrice { get; set; }
-        /// <summary>
-        /// 商品成本价格
-        /// </summary>
-        public decimal CostPrice { get; set; }
+        public decimal ShopUnitPrice { get; set; } = 0M;
         /// <summary>
         /// 商品市场价格
         /// </summary>
-        public decimal MarketPrice { get; set; }
+        public decimal MarkeUnittPrice { get; set; } = 0M;
         /// <summary>
-        /// 商品重量
+        /// 重量： 0.6斤
         /// </summary>
-        public int Weight { get; set; } = 1;
-
+        public string WeightString { get; set; }
         /// <summary>
-        /// 真实数量
+        /// 购物车数量
         /// </summary>
-        public int RealCount { get; set; }
+        public int CartCount { get; set; } = 1;
         /// <summary>
-        /// 商品购买数量
-        /// </summary>
-        public int BuyCount { get; set; }
-
-        /// <summary>
-        /// 添加时间
+        /// 放入购物车时间
         /// </summary>
         public DateTime AddTime { get; set; }
     }
 }
-
