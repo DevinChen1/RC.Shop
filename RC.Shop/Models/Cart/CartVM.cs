@@ -7,5 +7,6 @@ namespace RC.Shop.Models.Cart
 {
     public class CartVM
     {
+        public List<CartItem> CartItemList { get; set; } = new List<CartItem>();
     }
 }

@@ -15,6 +15,10 @@ namespace RC.Shop.Core.Domain.Product
         [Key]
         public string Pid { get; set; }=Guid.NewGuid().ToString("N");//商品id
         /// <summary>
+        /// 商品排序号
+        /// </summary>
+        public int? Index { get; set; } = 0;
+        /// <summary>
         /// 商品货号
         /// </summary>
         public string Psn { get; set; }//商品货号

@@ -8,21 +8,29 @@ namespace RC.Shop.Models.Goods
     public class GoodsItem
     {
         /// <summary>
+        /// 物品Id
+        /// </summary>
+        public string GoodsPid { get; internal set; }
+        /// <summary>
         /// 物品编号
         /// </summary>
         public string GoodsNo { get; set; }
         /// <summary>
         /// 物品排序号
         /// </summary>
-        public int GoodsIndex { get; set; }
+        public int? GoodsIndex { get; set; }
         /// <summary>
         /// 物品类别
         /// </summary>
-        public int GoodsType { get; set; }
+        public string GoodsType { get; set; }
+        /// <summary>
+        /// 物品类别排序号
+        /// </summary>
+        public int? GoodsTypeIndex { get; set; }
         /// <summary>
         /// 物品类别Id
         /// </summary>
-        public int GoodsTypeId { get; set; }
+        public string GoodsTypeId { get; set; }
         /// <summary>
         /// 物品图片
         /// </summary>
@@ -34,11 +42,11 @@ namespace RC.Shop.Models.Goods
         /// <summary>
         /// 商品商城价
         /// </summary>
-        public decimal Shopprice { get; set; }
+        public decimal? Shopprice { get; set; }
         /// <summary>
         /// 商品市场价
         /// </summary>
-        public decimal Marketprice { get; set; } = 0M;//商品市场价
+        public decimal? Marketprice { get; set; } = 0M;//商品市场价
         /// <summary>
         /// 物品描述
         /// </summary>
@@ -46,6 +54,7 @@ namespace RC.Shop.Models.Goods
         /// <summary>
         /// 销量
         /// </summary>
-        public int SeleCount { get; set; }
+        public int? SaleCount { get; set; } = 0;
+        
     }
 }

@@ -23,7 +23,26 @@ namespace RC.Shop.Controllers
         public IActionResult GetGoodsVM()
         {
             GoodsVM vm = new GoodsVM();
-            ///todo
+            vm.goodsList = (from CP in _context.CateProducts
+                            join P in _context.ProductInfos on CP.Pid equals P.Pid
+                            join C in _context.CategoryInfos on CP.CateId equals C.CateId
+                            select new GoodsItem
+                            {
+
+                                GoodsPid = P.Pid,
+                                GoodsDescription = P.Description,
+                                SaleCount = P.SaleCount,
+                                Shopprice = P.Shopprice,
+                                GoodsImg = P.ShowImg,
+                                GoodsIndex = P.Index,
+                                GoodsName = P.Name,
+                                GoodsNo = P.Psn,
+                                GoodsType = C.Name,
+                                GoodsTypeId = C.CateId,
+                                GoodsTypeIndex = C.Index,
+                                Marketprice = P.Marketprice
+                            }).ToList();
+
             return Json(vm);
         }
 

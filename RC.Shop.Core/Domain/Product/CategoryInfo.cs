@@ -44,7 +44,7 @@ namespace RC.Shop.Core.Domain.Product
         /// 分类路径
         /// </summary>
         public string Path { set; get; }
-
+        public int? Index { get; set; } = 0;
     }
 }
 
