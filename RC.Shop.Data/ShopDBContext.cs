@@ -18,7 +18,6 @@ namespace RC.Shop.Data
         #region 产品领域
         public DbSet<ProductInfo> ProductInfos { get; set; }
         public DbSet<CateProduct> CateProducts { get; set; }
-        public DbSet<ProductImageInfo> ProductImageInfos { get; set; }
         public DbSet<CategoryInfo> CategoryInfos { get; set; }
         #endregion
         #region 订单领域

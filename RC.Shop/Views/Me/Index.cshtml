@@ -32,49 +32,61 @@
 </head>
 
 <body>
-
-    <div class="w100 margin01rem">
-        <img class="w100" src="~/绿色的手机餐饮预订app页面模板源码/img/aboutbanner.png" />
+    <div id="app">
+        <div class="w100 margin01rem">
+            <img class="w100" src="~/绿色的手机餐饮预订app页面模板源码/img/aboutbanner.png" />
+        </div>
+        <p>{{message}}</p>
+        <ul class="inforList">
+            <li>
+                <a href="about-integral.html" class="isNext">
+                    <span><em><img src="~/绿色的手机餐饮预订app页面模板源码/img/about1.png"></em>我的积分</span>
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="about-coupon.html" class="isNext">
+                    <span><em><img style="height: 0.43rem;" src="~/绿色的手机餐饮预订app页面模板源码/img/about2.png"></em>我的优惠券</span>
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="edit-address.html" class="isNext">
+                    <span><em><img src="~/绿色的手机餐饮预订app页面模板源码/img/about3.png"></em>送餐地址</span>
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="other.html" class="isNext">
+                    <span><em><img src="~/绿色的手机餐饮预订app页面模板源码/img/about4.png"></em>其他信息</span>
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="mobile-phone.html" class="isNext">
+                    <span><em><img src="~/绿色的手机餐饮预订app页面模板源码/img/about5.png"></em>绑定手机</span>
+                    <span></span>
+                </a>
+            </li>
+        </ul>
+        <div style="height:1.2rem;"></div>
+        <nav>
+            <a href="index.html" class="homeIcon "><img src="~/绿色的手机餐饮预订app页面模板源码/img/index1.png">点餐</a>
+            <a href="my-order.html" class="categoryIcon "><img src="~/绿色的手机餐饮预订app页面模板源码/img/index2.png">订单</a>
+            <a href="service.html" class="cartIcon numberCount "><img src="~/绿色的手机餐饮预订app页面模板源码/img/index3.png">服务</a>
+            <a href="about-us.html" class="userIcon addclasstruenav"><img src="~/绿色的手机餐饮预订app页面模板源码/img/index4-1.png">我的</a>
+        </nav>
     </div>
-    <ul class="inforList">
-        <li>
-            <a href="about-integral.html" class="isNext">
-                <span><em><img src="~/绿色的手机餐饮预订app页面模板源码/img/about1.png"></em>我的积分</span>
-                <span></span>
-            </a>
-        </li>
-        <li>
-            <a href="about-coupon.html" class="isNext">
-                <span><em><img style="height: 0.43rem;" src="~/绿色的手机餐饮预订app页面模板源码/img/about2.png"></em>我的优惠券</span>
-                <span></span>
-            </a>
-        </li>
-        <li>
-            <a href="edit-address.html" class="isNext">
-                <span><em><img src="~/绿色的手机餐饮预订app页面模板源码/img/about3.png"></em>送餐地址</span>
-                <span></span>
-            </a>
-        </li>
-        <li>
-            <a href="other.html" class="isNext">
-                <span><em><img src="~/绿色的手机餐饮预订app页面模板源码/img/about4.png"></em>其他信息</span>
-                <span></span>
-            </a>
-        </li>
-        <li>
-            <a href="mobile-phone.html" class="isNext">
-                <span><em><img src="~/绿色的手机餐饮预订app页面模板源码/img/about5.png"></em>绑定手机</span>
-                <span></span>
-            </a>
-        </li>
-    </ul>
-    <div style="height:1.2rem;"></div>
-    <nav>
-        <a href="index.html" class="homeIcon "><img src="~/绿色的手机餐饮预订app页面模板源码/img/index1.png">点餐</a>
-        <a href="my-order.html" class="categoryIcon "><img src="~/绿色的手机餐饮预订app页面模板源码/img/index2.png">订单</a>
-        <a href="service.html" class="cartIcon numberCount "><img src="~/绿色的手机餐饮预订app页面模板源码/img/index3.png">服务</a>
-        <a href="about-us.html" class="userIcon addclasstruenav"><img src="~/绿色的手机餐饮预订app页面模板源码/img/index4-1.png">我的</a>
-    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+
+            }
+        })
+    </script>
 </body>
 
 </html>
