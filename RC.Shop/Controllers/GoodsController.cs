@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RC.Shop.Data;
+using RC.Shop.Models.Goods;
 
 namespace RC.Shop.Controllers
 {
@@ -19,5 +20,13 @@ namespace RC.Shop.Controllers
         {
             return View();
         }
+        public IActionResult GetGoodsVM()
+        {
+            GoodsVM vm = new GoodsVM();
+            ///todo
+            return Json(vm);
+        }
+
+
     }
 }

@@ -21,8 +21,4 @@
     <ProjectReference Include="..\RC.Shop.Data\RC.Shop.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="bower_components\" />
-  </ItemGroup>
-
 </Project>

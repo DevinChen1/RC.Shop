@@ -36,7 +36,7 @@
         <div class="w100 margin01rem">
             <img class="w100" src="~/绿色的手机餐饮预订app页面模板源码/img/aboutbanner.png" />
         </div>
-        <p>{{message}}</p>
+        <p>{{message}}{{a}}</p>
         <ul class="inforList">
             <li>
                 <a href="about-integral.html" class="isNext">
@@ -79,12 +79,10 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
     <script>
+        let data = { a: 1, message: 'Hello Vue!' }
         var app = new Vue({
             el: '#app',
-            data: {
-                message: 'Hello Vue!'
-
-            }
+            data: data
         })
     </script>
 </body>
