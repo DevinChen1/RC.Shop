@@ -19,6 +19,7 @@ namespace RC.Shop.Controllers
         }
         public IActionResult Index()
         {
+            RC.Shop.Comm.RCLog.Debug(this,"adadvavas");
             return View();
         }
         public IActionResult MyShipAddress(string uid)

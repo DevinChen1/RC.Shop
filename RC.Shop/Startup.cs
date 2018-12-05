@@ -60,7 +60,7 @@ namespace RC.Shop
             //       .AddSenparcWeixinServices(Configuration);//Senparc.Weixin 注册
 
 
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -85,7 +85,7 @@ namespace RC.Shop
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            }); 
             //// 启动 CO2NET 全局注册，必须！
 
             //IRegisterService register = RegisterService.Start(env, senparcSetting.Value)

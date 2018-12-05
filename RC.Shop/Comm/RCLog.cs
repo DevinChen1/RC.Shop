@@ -1,7 +1,7 @@
 ﻿using System;
 using NLog;
 
-namespace RC.Ahop.Comm
+namespace RC.Shop.Comm
 {
     public static class RCLog
     {

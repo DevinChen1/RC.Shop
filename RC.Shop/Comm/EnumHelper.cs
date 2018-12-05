@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RC.Ahop.Comm
+namespace RC.Shop.Comm
 {
     public static class EnumHelper
     {

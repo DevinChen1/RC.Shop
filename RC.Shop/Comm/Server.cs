@@ -10,7 +10,7 @@ using System.Web;
 using Microsoft.AspNetCore.Http;
 #endif
 
-namespace RC.Ahop.Comm
+namespace RC.Shop.Comm
 {
     public static class Server
     {
