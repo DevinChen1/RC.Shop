@@ -22,8 +22,7 @@ namespace RC.Shop.Data
         #endregion
         #region 订单领域
         public DbSet<CartProductInfo> CartProductInfos { get; set; }
-        public DbSet<OrderActionInfo> OrderActionInfos { get; set; }
-        public DbSet<OrderAfterServiceInfo> OrderAfterServiceInfos { get; set; }
+  
         public DbSet<OrderInfo> OrderInfos { get; set; }
         public DbSet<OrderProductInfo> OrderProductInfos { get; set; }
         #endregion

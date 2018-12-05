@@ -27,6 +27,14 @@ namespace RC.Shop.Core
         /// </summary>
         public OrderState OrderState { get; set; } = OrderState.WaitPaying;
         /// <summary>
+        /// 货物id列表
+        /// </summary>
+        public string OrderGoodsIdList { get; set; }
+        /// <summary>
+        /// 订单货物描述
+        /// </summary>
+        public string OrderGoodsDescription { get; set; }
+        /// <summary>
         /// 商品合计
         /// </summary>
         public decimal ProductAmount { get; set; }

@@ -21,4 +21,8 @@
     <ProjectReference Include="..\RC.Shop.Data\RC.Shop.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Me\Address\" />
+  </ItemGroup>
+
 </Project>

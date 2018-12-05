@@ -11,8 +11,8 @@ namespace RC.Shop.Models.Cart
         /// <summary>
         /// 是否选中
         /// </summary>
-        public bool IsSelected { get; set; } = false;
-
+        public bool? IsSelected { get; set; } = false;
+        public string UserId { get; set; }
         /// <summary>
         /// 商品id
         /// </summary>
@@ -32,11 +32,11 @@ namespace RC.Shop.Models.Cart
         /// <summary>
         /// 商城价格
         /// </summary>
-        public decimal ShopPrice { get; set; } = 0M;
+        public decimal? ShopPrice { get; set; } = 0M;
         /// <summary>
         /// 商品市场价格
         /// </summary>
-        public decimal MarkeSPrice { get; set; } = 0M;
+        public decimal? MarkeSPrice { get; set; } = 0M;
         /// <summary>
         /// 重量： 0.6斤
         /// </summary>
@@ -44,11 +44,11 @@ namespace RC.Shop.Models.Cart
         /// <summary>
         /// 购物车数量
         /// </summary>
-        public int CartCount { get; set; } = 1;
+        public int? Count { get; set; } = 1;
         /// <summary>
         /// 放入购物车时间
         /// </summary>
-        public DateTime AddTime { get; set; }
+        public DateTime? AddTime { get; set; } = DateTime.Now;
 
     }
 }

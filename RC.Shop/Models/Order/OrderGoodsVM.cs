@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace RC.Shop.Models.Goods
 {
-    public class OrderVM
+    public class OrderGoodsVM
     {
-        public List<OrderInfo> OrderItemList { get; set; } = new List<OrderInfo>();
+
+        public List<OrderProductInfo> OrderGoodsList { get; set; } = new List<OrderProductInfo>();
 
     }
 }

@@ -11,12 +11,13 @@ namespace RC.Shop.Core
         /// <summary>
         /// 记录id
         /// </summary>
+         [Key]
         public string RecordId { get; set; }
 
         /// <summary>
         /// 订单id
         /// </summary>
-        [Key]
+        
         public string Oid { get; set; }
         /// <summary>
         /// 用户id
