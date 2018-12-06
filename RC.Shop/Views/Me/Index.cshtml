@@ -68,6 +68,12 @@
                     <span></span>
                 </a>
             </li>
+            <li v-for="item in list">
+                <a :href="item.link" class="isNext">
+                    <span><em><img :src="item.img"></em>{{item.Name}}</span>
+                    <span></span>
+                </a>
+            </li>
         </ul>
         <div style="height:1.2rem;"></div>
         <nav>
@@ -77,12 +83,16 @@
             <a href="about-us.html" class="userIcon addclasstruenav"><img src="~/绿色的手机餐饮预订app页面模板源码/img/index4-1.png">我的</a>
         </nav>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
         let data = { a: 1, message: 'Hello Vue!' }
+    let data2 = {list:[
+        { link: 'http://www.baidu.com', img: '绿色的手机餐饮预订app页面模板源码/img/about5.png', Name: 'vue' },
+            { link: 'http://www.baidu.com', img:'绿色的手机餐饮预订app页面模板源码/img/about5.png', Name:'vue'},
+            { link: 'http://www.baidu.com', img:'绿色的手机餐饮预订app页面模板源码/img/about5.png', Name:'vue'}]}
         var app = new Vue({
             el: '#app',
-            data: data
+            data: data2
         })
     </script>
 </body>
