@@ -296,79 +296,14 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-        let data = {
-            goodsTypelist: [
-                {
-                    typeName: '蔬菜',
-                    typeId: '1',
-                    isSelect: true,
-                    ico: ''
-                },
-                {
-                    typeName: '水果',
-                    typeId: '2',
-                    isSelect: false,
-                    ico: ''
-                },
-                {
-                    typeName: '鸡蛋',
-                    typeId: '3',
-                    isSelect: false,
-                    ico: ''
-                },
-                {
-                    typeName: '大米',
-                    typeId: '4',
-                    isSelect: false,
-                    ico: ''
-                }
-
-            ],
-            goodsList: [
-                {
-                    goodsName: '凉拌猪耳',
-                    goodsId: 1,
-                    img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
-                    price: '25',
-                    cartCount: 0
-                },
-                {
-                    goodsName: '凉拌猪耳',
-                    goodsId: 2,
-                    img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
-                    price: '25',
-                    cartCount: 0
-                },
-                {
-                    goodsName: '凉拌猪耳',
-                    goodsId: 3,
-                    img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
-                    price: '25',
-                    cartCount: 0
-                },
-                {
-                    goodsName: '凉拌猪耳',
-                    goodsId: 4,
-                    img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
-                    price: '25',
-                    cartCount: 0
-                },
-                {
-                    goodsName: '凉拌猪耳',
-                    goodsId: 5,
-                    img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
-                    price: '25',
-                    cartCount: 0
-                },
-
-            ],
-
-        }
-
 
         var app = new Vue({
             el: '#app',
-            data: data,
+            data: {
+                goodsTypelist: [],
+                goodsList: [],
+                cartList:[]
+            },
             methods: {
                 handleReduce: function (item) {
                     console.log(item);
@@ -382,10 +317,80 @@
                 //handleRemove: function (index) {
                 //    this.list.splice(index, 1);
                 //}
+                getdate: function () {
+                    this.goodsTypelist =
+                        [
+                            {
+                                typeName: '蔬菜',
+                                typeId: '1',
+                                isSelect: true,
+                                ico: ''
+                            },
+                            {
+                                typeName: '水果',
+                                typeId: '2',
+                                isSelect: false,
+                                ico: ''
+                            },
+                            {
+                                typeName: '鸡蛋',
+                                typeId: '3',
+                                isSelect: false,
+                                ico: ''
+                            },
+                            {
+                                typeName: '大米',
+                                typeId: '4',
+                                isSelect: false,
+                                ico: ''
+                            }
+
+                        ];
+                    this.goodsList = [
+                        {
+                            goodsName: '凉拌猪耳',
+                            goodsId: 1,
+                            img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
+                            price: '25',
+                            cartCount: 0
+                        },
+                        {
+                            goodsName: '凉拌猪耳',
+                            goodsId: 2,
+                            img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
+                            price: '25',
+                            cartCount: 0
+                        },
+                        {
+                            goodsName: '凉拌猪耳',
+                            goodsId: 3,
+                            img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
+                            price: '25',
+                            cartCount: 0
+                        },
+                        {
+                            goodsName: '凉拌猪耳',
+                            goodsId: 4,
+                            img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
+                            price: '25',
+                            cartCount: 0
+                        },
+                        {
+                            goodsName: '凉拌猪耳',
+                            goodsId: 5,
+                            img: '绿色的手机餐饮预订app页面模板源码/img/index (2).png',
+                            price: '25',
+                            cartCount: 0
+                        },
+
+                    ];
+
+                    
+                }
             },
 
             computed: {
-                totalPrice: function () {
+                totalPrice: function () {                   
                     var total = 0;
                     for (var i = 0, len = this.list.length; i < len; i++) {
                         total += this.list[i].price * this.list[i].count;
@@ -393,6 +398,10 @@
                     //每隔三位加一个逗号
                     return total.toString().replace(/\B(?=(\d{3})+$)/g, ',');
                 }
+            },
+            created: function() {
+                console.log("测试");
+                this.getdate();
             }
 
         });
